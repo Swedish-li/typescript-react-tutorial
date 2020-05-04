@@ -133,6 +133,7 @@ class Game extends Component<GameProps, GameState> {
 function App() {
   return (
     <div className="App">
+      <h1>React Tutorial</h1>
       <Game />
     </div>
   );
