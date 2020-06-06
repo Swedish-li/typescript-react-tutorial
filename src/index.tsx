@@ -4,14 +4,16 @@ import 'todomvc-app-css/index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from './reducers'
+import configureStore from './configureStore'
+import { PersistGate } from 'redux-persist/integration/react'
 
-const store = createStore(reducer)
+const { store, persistor } = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>,
   document.getElementById('root')
 )
