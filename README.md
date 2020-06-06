@@ -1,5 +1,5 @@
-# Tutorial Typescript version: Intro to React
+# Tutorial Typescript version: Redux TodoMVC Example
 
-https://reactjs.org/tutorial/tutorial.html
+https://codesandbox.io/s/gracious-mclaren-mh3xh
 
 
