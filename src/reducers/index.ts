@@ -3,9 +3,9 @@ import todos from './todos'
 import visibilityFilter from './visibilityFilter'
 
 const rootReducer = combineReducers({
-    todos,
-    visibilityFilter
+  todos,
+  visibilityFilter,
 })
 
-export default rootReducer;
+export default rootReducer
 export type RootState = ReturnType<typeof rootReducer>

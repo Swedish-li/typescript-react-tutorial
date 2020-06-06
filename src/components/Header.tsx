@@ -1,9 +1,9 @@
-import React from "react";
-import TodoTextInput from "./TodoTextInput";
+import React from 'react'
+import TodoTextInput from './TodoTextInput'
 
 type Props = {
-  addTodo: (val: string) => void;
-};
+  addTodo: (val: string) => void
+}
 
 const Header = ({ addTodo }: Props) => (
   <header className="header">
@@ -12,12 +12,12 @@ const Header = ({ addTodo }: Props) => (
       newTodo
       onSave={(text: string) => {
         if (text.length) {
-          addTodo(text);
+          addTodo(text)
         }
       }}
       placeholder="What needs to be done?"
     />
   </header>
-);
+)
 
-export default Header;
+export default Header

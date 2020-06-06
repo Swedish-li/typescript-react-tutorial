@@ -1,17 +1,17 @@
-import React from "react";
-import VisibleTodoList from "../containers/VisibleTodoList";
-import Footer from "./Footer";
+import React from 'react'
+import VisibleTodoList from '../containers/VisibleTodoList'
+import Footer from './Footer'
 
 export type MainActions = {
-  clearCompleted: () => void;
-  completeAllTodos: () => void;
-};
+  clearCompleted: () => void
+  completeAllTodos: () => void
+}
 
 export type Props = {
-  todosCount: number;
-  completedCount: number;
-  actions: MainActions;
-};
+  todosCount: number
+  completedCount: number
+  actions: MainActions
+}
 const MainSection = ({ todosCount, completedCount, actions }: Props) => (
   <section className="main">
     {!!todosCount && (
@@ -34,6 +34,6 @@ const MainSection = ({ todosCount, completedCount, actions }: Props) => (
       />
     )}
   </section>
-);
+)
 
-export default MainSection;
+export default MainSection
