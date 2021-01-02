@@ -14,7 +14,7 @@ const setup = (propOverrides?: Partial<Props>) => {
         editTodo: jest.fn(),
         deleteTodo: jest.fn(),
         completeTodo: jest.fn(),
-        completeAllTodos: jest.fn(),
+        toggleAll: jest.fn(),
         clearCompleted: jest.fn(),
       },
     },
@@ -60,12 +60,12 @@ describe('components', () => {
         expect(toggle.props.checked).toBe(true)
       })
 
-      it('should call completeAllTodos on change', () => {
+      it('should call toggleAllTodos on change', () => {
         const { output, props } = setup()
         const [, label] = output.props.children[0].props.children
 
         label.props.onClick({})
-        expect(props.actions.completeAllTodos).toBeCalled()
+        expect(props.actions.toggleAll).toBeCalled()
       })
     })
 

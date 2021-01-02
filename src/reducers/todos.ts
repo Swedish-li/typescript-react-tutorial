@@ -3,7 +3,7 @@ import {
   DELETE_TODO,
   EDIT_TODO,
   COMPLETE_TODO,
-  COMPLETE_ALL_TODOS,
+  TOGGLE_ALL_TODOS,
   CLEAR_COMPLETED,
 } from '../constants/ActionTypes'
 
@@ -35,7 +35,7 @@ export interface CompleteTodoAction {
 }
 
 export interface CompleteAllTodoAction {
-  type: typeof COMPLETE_ALL_TODOS
+  type: typeof TOGGLE_ALL_TODOS
 }
 
 export interface ClearCompletedTodoAction {
@@ -83,7 +83,7 @@ export default function todo(state = initialState, action: TodoAction) {
         todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       )
 
-    case COMPLETE_ALL_TODOS:
+    case TOGGLE_ALL_TODOS:
       const areAllMarked = state.every((todo) => todo.completed)
       return state.map((todo) => ({
         ...todo,

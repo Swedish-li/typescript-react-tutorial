@@ -25,8 +25,8 @@ export const completeTodo = (id: number): CompleteTodoAction => ({
   type: types.COMPLETE_TODO,
   id,
 })
-export const completeAllTodos = (): CompleteAllTodoAction => ({
-  type: types.COMPLETE_ALL_TODOS,
+export const toggleAllTodos = (): CompleteAllTodoAction => ({
+  type: types.TOGGLE_ALL_TODOS,
 })
 export const clearCompleted = (): ClearCompletedTodoAction => ({
   type: types.CLEAR_COMPLETED,

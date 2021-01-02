@@ -31,9 +31,9 @@ describe('todo actions', () => {
     })
   })
 
-  it('completeAll should create COMPLETE_ALL action', () => {
-    expect(actions.completeAllTodos()).toEqual({
-      type: types.COMPLETE_ALL_TODOS,
+  it('toggleAll should create toggleAllTodos action', () => {
+    expect(actions.toggleAllTodos()).toEqual({
+      type: types.TOGGLE_ALL_TODOS,
     })
   })
 

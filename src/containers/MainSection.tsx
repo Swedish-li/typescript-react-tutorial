@@ -1,13 +1,13 @@
 import { RootState } from '../reducers'
 import { getCompletedTodoCount } from '../selectors'
-import { clearCompleted, completeAllTodos } from '../actions'
+import { clearCompleted, toggleAllTodos } from '../actions'
 import { connect } from 'react-redux'
 import MainSection, { MainActions } from '../components/MainSection'
 import { Dispatch, bindActionCreators } from 'redux'
 
 const actions: MainActions = {
   clearCompleted,
-  completeAllTodos,
+  toggleAll: toggleAllTodos,
 }
 
 const mapStateToProps = (state: RootState) => ({

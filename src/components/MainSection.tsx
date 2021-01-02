@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 export type MainActions = {
   clearCompleted: () => void
-  completeAllTodos: () => void
+  toggleAll: () => void
 }
 
 export type Props = {
@@ -22,7 +22,7 @@ const MainSection = ({ todosCount, completedCount, actions }: Props) => (
           checked={completedCount === todosCount}
           readOnly
         />
-        <label onClick={actions.completeAllTodos} />
+        <label onClick={actions.toggleAll} />
       </span>
     )}
     <VisibleTodoList />
