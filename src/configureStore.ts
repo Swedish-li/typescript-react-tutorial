@@ -18,9 +18,11 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-export default () => {
+const configureStore = () => {
   // composeEnhancers
   const store = createStore(persistedReducer, composeEnhancers())
   const persistor = persistStore(store)
   return { store, persistor }
 }
+
+export default configureStore
