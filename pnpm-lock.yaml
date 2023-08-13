@@ -3733,6 +3733,7 @@ packages:
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -5619,11 +5620,9 @@ packages:
     engines: {node: '>=0.8.x'}
     dev: true
 
-  /eventsource@1.1.0:
-    resolution: {integrity: sha512-VSJjT5oCNrFvCS6igjzPAt5hBzQ2qPBFIbJ03zLI9SE0mxwZpMw6BfJrbFHm1a141AavMEB8JHmBhWAd66PfCg==}
+  /eventsource@1.1.2:
+    resolution: {integrity: sha512-xAH3zWhgO2/3KIniEKYPr8plNSzlGINOUqYj0m0u7AB81iRw8b/3E73W6AuU+6klLbaSFmZnaETQ2lXPfAydrA==}
     engines: {node: '>=0.12.0'}
-    dependencies:
-      original: 1.0.2
     dev: true
 
   /evp_bytestokey@1.0.3:
@@ -6765,6 +6764,7 @@ packages:
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
+    requiresBuild: true
     dependencies:
       binary-extensions: 2.2.0
     dev: true
@@ -8667,12 +8667,6 @@ packages:
       word-wrap: 1.2.4
     dev: true
 
-  /original@1.0.2:
-    resolution: {integrity: sha512-hyBVl6iqqUOJ8FqRe+l/gS8H+kKYjrEndd5Pm1MfBtsEKA038HkkdbAl/72EAXGyonD/PFsvmVG+EvcIpliMBg==}
-    dependencies:
-      url-parse: 1.5.1
-    dev: true
-
   /os-browserify@0.3.0:
     resolution: {integrity: sha1-hUNzx/XCMVkU/Jv8a9gjj92h7Cc=}
     dev: true
@@ -10097,6 +10091,7 @@ packages:
   /readdirp@3.5.0:
     resolution: {integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==}
     engines: {node: '>=8.10.0'}
+    requiresBuild: true
     dependencies:
       picomatch: 2.3.0
     dev: true
@@ -10812,7 +10807,7 @@ packages:
     resolution: {integrity: sha512-5zaLyO8/nri5cua0VtOrFXBPK1jbL4+1cebT/mmKA1E1ZXOvJrII75bPu0l0k843G/+iAbhEqzyKr0w/eCCj7g==}
     dependencies:
       debug: 3.2.7(supports-color@6.1.0)
-      eventsource: 1.1.0
+      eventsource: 1.1.2
       faye-websocket: 0.11.3
       inherits: 2.0.4
       json3: 3.3.3
