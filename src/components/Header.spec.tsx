@@ -1,21 +1,21 @@
-import React from 'react'
+import { describe, it, expect, vi } from 'vitest'
 import { createRenderer } from 'react-test-renderer/shallow'
 import Header from './Header'
 import TodoTextInput from '../components/TodoTextInput'
 
 const setup = () => {
   const props = {
-    addTodo: jest.fn(),
+    addTodo: vi.fn(),
   }
 
-  const renderer = createRenderer()
-  renderer.render(<Header {...props} />)
-  const output = renderer.getRenderOutput()
+  const utils = createRenderer()
+  utils.render(<Header {...props} />)
+  const output = utils.getRenderOutput()
 
   return {
     props,
     output,
-    renderer,
+    utils,
   }
 }
 

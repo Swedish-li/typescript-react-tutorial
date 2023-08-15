@@ -1,4 +1,4 @@
-import React from 'react'
+import { describe, it, expect, vi } from 'vitest'
 import { createRenderer } from 'react-test-renderer/shallow'
 import TodoList from './TodoList'
 import TodoItem from './TodoItem'
@@ -18,17 +18,17 @@ const setup = () => {
       },
     ],
     actions: {
-      editTodo: jest.fn(),
-      deleteTodo: jest.fn(),
-      completeTodo: jest.fn(),
-      completeAll: jest.fn(),
-      clearCompleted: jest.fn(),
+      editTodo: vi.fn(),
+      deleteTodo: vi.fn(),
+      completeTodo: vi.fn(),
+      completeAll: vi.fn(),
+      clearCompleted: vi.fn(),
     },
   }
 
-  const renderer = createRenderer()
-  renderer.render(<TodoList {...props} />)
-  const output = renderer.getRenderOutput()
+  const utils = createRenderer()
+  utils.render(<TodoList {...props} />)
+  const output = utils.getRenderOutput()
 
   return {
     props: props,

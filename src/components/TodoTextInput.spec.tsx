@@ -1,17 +1,17 @@
-import React from 'react'
+import { describe, it, expect, vi } from 'vitest'
 import { createRenderer } from 'react-test-renderer/shallow'
 import TodoTextInput, { Props } from './TodoTextInput'
 
 const setup = (propOverrides?: Partial<Props>) => {
   const props = Object.assign(
     {
-      onSave: jest.fn(),
+      onSave: vi.fn(),
       text: 'Use Redux',
       placeholder: 'What needs to be done?',
       editing: false,
       newTodo: false,
     },
-    propOverrides
+    propOverrides,
   )
 
   const renderer = createRenderer()

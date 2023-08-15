@@ -75,12 +75,12 @@ export default function todo(state = initialState, action: TodoAction) {
 
     case EDIT_TODO:
       return state.map((todo) =>
-        todo.id === action.id ? { ...todo, text: action.text } : todo
+        todo.id === action.id ? { ...todo, text: action.text } : todo,
       )
 
     case COMPLETE_TODO:
       return state.map((todo) =>
-        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo,
       )
 
     case TOGGLE_ALL_TODOS:

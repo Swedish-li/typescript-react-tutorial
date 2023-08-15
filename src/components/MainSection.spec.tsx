@@ -1,7 +1,7 @@
 import { Props } from './MainSection'
 import { createRenderer } from 'react-test-renderer/shallow'
 import MainSection from '../components/MainSection'
-import React from 'react'
+import { describe, it, expect, vi } from 'vitest'
 import Footer from './Footer'
 import VisibleTodoList from '../containers/VisibleTodoList'
 
@@ -11,14 +11,14 @@ const setup = (propOverrides?: Partial<Props>) => {
       todosCount: 2,
       completedCount: 1,
       actions: {
-        editTodo: jest.fn(),
-        deleteTodo: jest.fn(),
-        completeTodo: jest.fn(),
-        toggleAll: jest.fn(),
-        clearCompleted: jest.fn(),
+        editTodo: vi.fn(),
+        deleteTodo: vi.fn(),
+        completeTodo: vi.fn(),
+        toggleAll: vi.fn(),
+        clearCompleted: vi.fn(),
       },
     },
-    propOverrides
+    propOverrides,
   )
 
   const renderer = createRenderer()
@@ -101,7 +101,7 @@ describe('components', () => {
           completedCount: 0,
         })
         const renderedChildren = output.props.children.filter(
-          (item: any) => item !== false
+          (item: any) => item !== false,
         )
         expect(renderedChildren.length).toBe(1)
         expect(renderedChildren[0].type).toBe(VisibleTodoList)
