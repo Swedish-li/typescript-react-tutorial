@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { createRenderer }  from 'react-test-renderer/shallow'
+import { createRenderer } from 'react-test-renderer/shallow'
 import App from './App'
 import Header from './containers/Header'
 import MainSection from './containers/MainSection'
