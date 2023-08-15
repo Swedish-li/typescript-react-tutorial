@@ -15,7 +15,7 @@ const initialState: FilterType = SHOW_ALL
 
 const visibilityFilter = (
   state: FilterType = initialState,
-  action: VisibilityFilterAction
+  action: VisibilityFilterAction,
 ) => {
   switch (action.type) {
     case SET_VISIBILITY_FILTER:

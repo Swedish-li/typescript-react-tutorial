@@ -1,4 +1,4 @@
-import React from 'react'
+import { describe, it, expect, vi } from 'vitest'
 import { createRenderer } from 'react-test-renderer/shallow'
 import Link from './Link'
 import { Props } from './Link'
@@ -8,14 +8,14 @@ const setup = (propOverrides?: Partial<Props>) => {
     {
       active: false,
       children: 'All',
-      setFilter: jest.fn(),
+      setFilter: vi.fn(),
     },
-    propOverrides
+    propOverrides,
   )
 
-  const renderer = createRenderer()
-  renderer.render(<Link {...props} />)
-  const output = renderer.getRenderOutput()
+  const utils = createRenderer()
+  utils.render(<Link {...props} />)
+  const output = utils.getRenderOutput()
   return {
     props,
     output,

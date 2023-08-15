@@ -19,9 +19,9 @@ export const getVisibleTodos = createSelector(
       default:
         throw new Error('Unknown filter:' + visibilityFilter)
     }
-  }
+  },
 )
 
 export const getCompletedTodoCount = createSelector([getTodos], (todos) =>
-  todos.reduce((count, todo) => (todo.completed ? count + 1 : count), 0)
+  todos.reduce((count, todo) => (todo.completed ? count + 1 : count), 0),
 )

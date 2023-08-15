@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "testing-library/render-result-naming-convention": "off",
+    "prettier/prettier": [
+      "error"
+    ]
+  },
+  "extends": [
+    "prettier",
+    "react-app",
+    "react-app/jest"
+  ],
+  "plugins": [
+    "prettier"
+  ]
+}

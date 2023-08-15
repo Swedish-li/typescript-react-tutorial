@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import todos, { TodoAction } from './todos'
 import * as types from '../constants/ActionTypes'
 
@@ -34,8 +35,8 @@ describe('todo reducer', () => {
         {
           type: types.ADD_TODO,
           text: 'add test1 todo',
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Use Redux',
@@ -66,8 +67,8 @@ describe('todo reducer', () => {
         {
           type: types.ADD_TODO,
           text: 'add test2 todo',
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Use Redux',
@@ -105,8 +106,8 @@ describe('todo reducer', () => {
         {
           type: types.DELETE_TODO,
           id: 1,
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Use Redux',
@@ -135,8 +136,8 @@ describe('todo reducer', () => {
           type: types.EDIT_TODO,
           text: 'Fix the tests',
           id: 1,
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Fix the tests',
@@ -169,8 +170,8 @@ describe('todo reducer', () => {
         {
           type: types.COMPLETE_TODO,
           id: 1,
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Run the tests',
@@ -202,8 +203,8 @@ describe('todo reducer', () => {
         ],
         {
           type: types.TOGGLE_ALL_TODOS,
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Run the tests',
@@ -234,8 +235,8 @@ describe('todo reducer', () => {
         ],
         {
           type: types.TOGGLE_ALL_TODOS,
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Run the tests',
@@ -267,8 +268,8 @@ describe('todo reducer', () => {
         ],
         {
           type: types.CLEAR_COMPLETED,
-        }
-      )
+        },
+      ),
     ).toEqual([
       {
         text: 'Use Redux',
@@ -305,7 +306,7 @@ describe('todo reducer', () => {
           completed: false,
           text: 'Write tests',
         },
-      ])
+      ]),
     ).toEqual([
       {
         text: 'Write tests',

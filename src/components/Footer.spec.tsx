@@ -1,6 +1,6 @@
+import { describe, it, expect, vi } from 'vitest'
 import Footer, { Props } from './Footer'
 import { createRenderer } from 'react-test-renderer/shallow'
-import React from 'react'
 import { SHOW_COMPLETED, SHOW_ACTIVE, SHOW_ALL } from '../constants/TodoFilters'
 import FilterLink from '../containers/FilterLink'
 
@@ -9,14 +9,14 @@ const setup = (propsOverrides?: Partial<Props>) => {
     {
       activeCount: 0,
       completedCount: 0,
-      onClearCompleted: jest.fn(),
+      onClearCompleted: vi.fn(),
     },
-    propsOverrides
+    propsOverrides,
   )
 
-  const renderer = createRenderer()
-  renderer.render(<Footer {...props} />)
-  const output = renderer.getRenderOutput()
+  const utils = createRenderer()
+  utils.render(<Footer {...props} />)
+  const output = utils.getRenderOutput()
 
   return {
     props,

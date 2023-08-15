@@ -1,4 +1,4 @@
-import React from 'react'
+import { describe, it, expect, vi } from 'vitest'
 import { createRenderer } from 'react-test-renderer/shallow'
 import TodoItem from './TodoItem'
 import TodoTextInput from './TodoTextInput'
@@ -10,9 +10,9 @@ const setup = (editing = false) => {
       text: 'Use Redux',
       completed: false,
     },
-    editTodo: jest.fn(),
-    deleteTodo: jest.fn(),
-    completeTodo: jest.fn(),
+    editTodo: vi.fn(),
+    deleteTodo: vi.fn(),
+    completeTodo: vi.fn(),
   }
 
   const renderer = createRenderer()
